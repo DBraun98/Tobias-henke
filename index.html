@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tobias Henke Berufsbilder (Entwurf)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#E6E2D3;
+  --papier-hell:#EFEBDD;
+  --papier-tief:#D3CCB5;
+  --tinte:#231C14;
+  --tinte-weich:#4A3F33;
+  --rubrum:#A3271B;
+  --rubrum-dunkel:#7E1C13;
+  --waid:#2F4A68;
+  --linie:#B9B09A;
+  --fraktur:"UnifrakturMaguntia","Old English Text MT",serif;
+  --text:"Alegreya",Georgia,serif;
+  --breite:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{
+  margin:0;
+  background-color:var(--papier);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .11 0 0 0 0 .08 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--tinte);
+  font-family:var(--text);
+  font-size:1.125rem;
+  line-height:1.6;
+}
+a{color:var(--waid)}
+a:hover{color:var(--rubrum)}
+:focus-visible{outline:3px solid var(--waid);outline-offset:3px}
+.rahmen{max-width:var(--breite);margin:0 auto;padding:0 16px}
+@media (min-width:700px){.rahmen{padding:0 32px}}
+
+/* Entwurfsleiste */
+.entwurf-leiste{background:var(--tinte);color:var(--papier-hell);font-size:.95rem}
+.entwurf-leiste .rahmen{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+.entwurf-leiste p{margin:0}
+
+
+/* Kopf */
+.kopf{border-bottom:1px solid var(--linie)}
+.kopf .rahmen{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.marke{font-family:var(--fraktur);font-size:1.9rem;line-height:1;color:var(--tinte);text-decoration:none}
+.nav{display:none;gap:22px}
+.nav a{color:var(--tinte);text-decoration:none}
+.nav a:hover{color:var(--rubrum);text-decoration:underline}
+@media (min-width:900px){.nav{display:flex}}
+.merk-knopf{font:inherit;font-size:1rem;background:transparent;border:1.5px solid var(--tinte);color:var(--tinte);padding:6px 14px;cursor:pointer;white-space:nowrap}
+.merk-knopf:hover{background:var(--tinte);color:var(--papier-hell)}
+.merk-zahl{display:inline-block;min-width:1.5em;margin-left:6px;background:var(--rubrum);color:#fff;text-align:center;padding:0 4px}
+
+/* Start */
+.start .rahmen{display:grid;gap:40px;padding-top:56px;padding-bottom:64px;align-items:center}
+@media (min-width:860px){.start .rahmen{grid-template-columns:1.15fr .85fr;padding-top:80px;padding-bottom:88px}}
+.start h1{font-family:var(--fraktur);font-weight:400;font-size:clamp(3rem,8vw,5.6rem);line-height:.95;margin:0 0 24px}
+.start .einleitung{font-size:1.3rem;max-width:34ch;margin:0 0 32px;color:var(--tinte-weich)}
+.knoepfe{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.knopf{display:inline-block;font:inherit;font-weight:500;background:var(--rubrum);color:#fff;border:0;padding:12px 22px;text-decoration:none;cursor:pointer}
+.knopf:hover{background:var(--rubrum-dunkel);color:#fff}
+.knopf-still{font-weight:500}
+.blatt{margin:0;justify-self:center;width:min(340px,100%);transform:rotate(-2.5deg);box-shadow:8px 10px 0 var(--papier-tief)}
+.blatt svg{display:block;width:100%;height:auto}
+
+/* Abschnitte */
+.abschnitt{padding:64px 0;border-top:1px solid var(--linie)}
+.abschnitt h2{font-family:var(--fraktur);font-weight:400;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;margin:0 0 12px}
+.abschnitt .unterzeile{margin:0 0 28px;max-width:56ch;color:var(--tinte-weich)}
+
+/* Register */
+.suche{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;margin-bottom:32px}
+.suche label{display:block;font-size:.95rem;margin-bottom:4px}
+.suche input{font:inherit;width:min(320px,100%);padding:10px 12px;background:var(--papier-hell);border:1.5px solid var(--tinte);color:var(--tinte)}
+.filter{display:flex;flex-wrap:wrap;gap:8px}
+.filter button{font:inherit;font-size:1rem;background:transparent;border:1.5px solid var(--linie);color:var(--tinte);padding:8px 14px;cursor:pointer}
+.filter button[aria-pressed="true"]{border-color:var(--tinte);background:var(--tinte);color:var(--papier-hell)}
+.register{list-style:none;margin:0;padding:0;display:grid;gap:40px 28px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.beruf{display:flex;flex-direction:column}
+.beruf figure{margin:0 0 14px}
+.beruf svg{display:block;width:100%;height:auto}
+.beruf h3{font-family:var(--fraktur);font-weight:400;font-size:1.75rem;line-height:1.1;margin:0 0 6px}
+.beruf .chronik{font-style:italic;margin:0 0 10px;color:var(--tinte-weich);flex:1}
+.beruf .angaben{font-size:.95rem;margin:0 0 12px}
+.beruf button{font:inherit;font-size:1rem;align-self:flex-start;background:transparent;border:1.5px solid var(--rubrum);color:var(--rubrum);padding:8px 14px;cursor:pointer}
+.beruf button:hover{background:var(--rubrum);color:#fff}
+.beruf button[aria-pressed="true"]{background:var(--rubrum);color:#fff}
+.leer{display:none;padding:24px;border:1.5px dashed var(--tinte-weich);max-width:56ch}
+.leer.zeigen{display:block}
+
+/* Verschenken */
+.anlaesse{display:grid;gap:28px 40px;margin:0;padding:0}
+@media (min-width:760px){.anlaesse{grid-template-columns:1fr 1fr}}
+.anlaesse div{border-left:3px solid var(--rubrum);padding-left:16px}
+.anlaesse dt{font-weight:700;font-size:1.2rem}
+.anlaesse dd{margin:2px 0 0;color:var(--tinte-weich);max-width:44ch}
+
+/* Auftragsbild */
+.auftrag .rahmen{display:grid;gap:24px}
+@media (min-width:860px){.auftrag .rahmen{grid-template-columns:1fr 1fr;align-items:start}}
+.auftrag p{max-width:48ch}
+
+/* Bestellen */
+.schritte{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:24px}
+@media (min-width:860px){.schritte{grid-template-columns:repeat(4,1fr)}}
+.schritte li{counter-increment:s;padding-top:8px;border-top:1.5px solid var(--tinte)}
+.schritte li::before{content:counter(s);display:block;font-family:var(--fraktur);font-size:2.4rem;line-height:1.1;color:var(--rubrum)}
+.schritte strong{display:block}
+.hinweis{margin:28px 0 0;max-width:60ch}
+
+/* Märkte */
+.maerkte{margin:0;padding:0;list-style:none;max-width:720px}
+.maerkte li{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--linie)}
+.maerkte .ort{color:var(--tinte-weich)}
+.maerkte .wann{text-align:right;white-space:nowrap}
+
+/* Über mich */
+.ueber p{max-width:60ch}
+
+/* Fuß */
+.fuss{border-top:1px solid var(--linie);padding:32px 0 48px;font-size:.95rem}
+.fuss .rahmen{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+.fuss nav{display:flex;gap:20px}
+.fuss .marke{font-size:1.5rem}
+
+/* Merkliste */
+.schleier{position:fixed;inset:0;background:rgba(35,28,20,.45);opacity:0;pointer-events:none;transition:opacity .2s}
+.schleier.offen{opacity:1;pointer-events:auto}
+.merkliste{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--papier-hell);border-left:2px solid var(--tinte);padding:24px 20px;overflow-y:auto;transform:translateX(100%);transition:transform .25s ease;z-index:10}
+.merkliste.offen{transform:none}
+.merkliste h2{font-family:var(--fraktur);font-weight:400;font-size:2.2rem;margin:0 0 8px}
+.merkliste .zu{position:absolute;top:14px;right:16px;font:inherit;background:transparent;border:1.5px solid var(--tinte);padding:4px 10px;cursor:pointer}
+.merkliste ul{list-style:none;margin:16px 0;padding:0}
+.merkliste li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--linie)}
+.merkliste li button{font:inherit;font-size:.9rem;background:transparent;border:0;color:var(--rubrum);text-decoration:underline;cursor:pointer}
+.merkliste label{display:block;font-size:.95rem;margin:16px 0 4px}
+.merkliste input,.merkliste textarea{font:inherit;width:100%;padding:10px 12px;background:#fff;border:1.5px solid var(--tinte);color:var(--tinte)}
+.merkliste textarea{min-height:90px;resize:vertical}
+.merkliste .knopf{width:100%;margin-top:20px}
+.merkliste .klein{font-size:.95rem;color:var(--tinte-weich);margin:12px 0 0}
+.merk-leer{color:var(--tinte-weich)}
+</style>
+</head>
+<body>
+
+<div class="entwurf-leiste">
+  <div class="rahmen">
+    <p>Entwurf von Dennis Peterschun für dich, Tobias. Bilder, Texte und Preise sind Platzhalter.</p>
+  </div>
+</div>
+
+<header class="kopf">
+  <div class="rahmen">
+    <a class="marke" href="#start">Tobias Henke</a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#berufe">Berufe</a>
+      <a href="#verschenken">Verschenken</a>
+      <a href="#auftrag">Auftragsbild</a>
+      <a href="#bestellen">Bestellen</a>
+      <a href="#maerkte">Märkte</a>
+      <a href="#ueber">Über mich</a>
+    </nav>
+    <button type="button" class="merk-knopf" id="merk-oeffnen" aria-controls="merkliste">Merkliste<span class="merk-zahl" id="merk-zahl">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="start" id="start">
+    <div class="rahmen">
+      <div>
+        <h1>Dein Beruf als Bild</h1>
+        <p class="einleitung">Handgezeichnete Berufsbilder im alten Stil, jedes mit einer Beschreibung wie aus einer Zunftchronik. Vom Bäcker bis zum Programmierer.</p>
+        <div class="knoepfe">
+          <a class="knopf" href="#berufe">Deinen Beruf finden</a>
+          <a class="knopf-still" href="#auftrag">Beruf fehlt? Auftragsbild anfragen</a>
+        </div>
+      </div>
+      <figure class="blatt" id="start-blatt" aria-hidden="true"></figure>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="berufe">
+    <div class="rahmen">
+      <h2>Die Berufe</h2>
+      <p class="unterzeile">Such deinen Beruf oder blättere von A bis Z. Was dir gefällt, legst du auf die Merkliste und schickst mir am Ende eine Anfrage.</p>
+
+      <div class="suche">
+        <div>
+          <label for="suchfeld">Beruf suchen</label>
+          <input id="suchfeld" type="search" placeholder="z. B. Tischler" autocomplete="off">
+        </div>
+        <div class="filter" role="group" aria-label="Berufe filtern">
+          <button type="button" data-filter="alle" aria-pressed="true">Alle</button>
+          <button type="button" data-filter="alt" aria-pressed="false">Altes Handwerk</button>
+          <button type="button" data-filter="heute" aria-pressed="false">Berufe von heute</button>
+        </div>
+      </div>
+
+      <ul class="register" id="register"></ul>
+      <div class="leer" id="leer">
+        <p>Dein Beruf ist noch nicht dabei? Ich zeichne ihn auf Wunsch. <a href="#auftrag">Auftragsbild anfragen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="verschenken">
+    <div class="rahmen">
+      <h2>Zum Verschenken</h2>
+      <p class="unterzeile">Ein Bild vom eigenen Beruf gibt es in keinem Laden. Deshalb wird es gern zu besonderen Anlässen verschenkt.</p>
+      <dl class="anlaesse">
+        <div><dt>Meisterprüfung und Gesellenbrief</dt><dd>Für alle, die gerade ihren Abschluss geschafft haben und ihn an die Wand hängen wollen.</dd></div>
+        <div><dt>Firmenjubiläum</dt><dd>Für den Betrieb, der 25 oder 50 Jahre feiert, oder für Mitarbeiter, die lange dabei sind.</dd></div>
+        <div><dt>Ruhestand</dt><dd>Zum Abschied aus dem Berufsleben, als Erinnerung an viele Jahre im Handwerk.</dd></div>
+        <div><dt>Weihnachten</dt><dd>Für den Vater, der Schmied war, oder die Freundin, die als Pflegerin arbeitet.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="abschnitt auftrag" id="auftrag">
+    <div class="rahmen">
+      <div>
+        <h2>Dein Beruf fehlt?</h2>
+        <p>Ich zeichne auch Berufe, die noch nicht in der Sammlung sind. Schreib mir, welcher Beruf es sein soll und wofür das Bild gedacht ist. Ich melde mich mit einem Vorschlag und dem Preis.</p>
+        <a class="knopf" id="auftrag-knopf" href="#">Auftragsbild anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="bestellen">
+    <div class="rahmen">
+      <h2>So kommst du zu deinem Bild</h2>
+      <p class="unterzeile">Kein Warenkorb, keine Kasse. Du schreibst mir, ich melde mich persönlich.</p>
+      <ol class="schritte">
+        <li><strong>Bild aussuchen</strong>Leg einen oder mehrere Berufe auf die Merkliste.</li>
+        <li><strong>Anfrage schicken</strong>Ein Klick öffnet eine fertige E-Mail an mich.</li>
+        <li><strong>Antwort bekommen</strong>Ich melde mich mit Preis, Format und Versandkosten.</li>
+        <li><strong>Bild bekommen</strong>Per Post oder zum Abholen an meinem Stand.</li>
+      </ol>
+      <p class="hinweis">Du zahlst erst, wenn wir uns über Preis und Versand einig sind.</p>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="maerkte">
+    <div class="rahmen">
+      <h2>Hier triffst du mich</h2>
+      <p class="unterzeile">Am liebsten zeige ich die Bilder direkt am Stand. Hier sind meine nächsten Märkte.</p>
+      <ul class="maerkte">
+        <li><span><strong>Bovelmarkt</strong><br><span class="ort">Bassum</span></span><span class="wann">Termin folgt</span></li>
+        <li><span><strong>Weiterer Markt</strong><br><span class="ort">Ort folgt</span></span><span class="wann">Termin folgt</span></li>
+        <li><span><strong>Weiterer Markt</strong><br><span class="ort">Ort folgt</span></span><span class="wann">Termin folgt</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="abschnitt ueber" id="ueber">
+    <div class="rahmen">
+      <h2>Über mich</h2>
+      <p>Hier steht bald, wer hinter den Bildern steckt und wie die Berufsbilder entstehen: mit welcher Feder, auf welchem Papier, und woher die alten Beschreibungen kommen.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="rahmen">
+    <span class="marke">Tobias Henke</span>
+    <nav aria-label="Rechtliches">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </nav>
+    <span>Entwurf: <a href="https://peterschun.com">peterschun.com</a></span>
+  </div>
+</footer>
+
+<div class="schleier" id="schleier"></div>
+<aside class="merkliste" id="merkliste" aria-label="Merkliste" aria-hidden="true">
+  <button type="button" class="zu" id="merk-zu">Schließen</button>
+  <h2>Merkliste</h2>
+  <p class="merk-leer" id="merk-leer">Noch leer. Leg ein Bild aus den Berufen auf die Liste.</p>
+  <ul id="merk-liste"></ul>
+  <div id="merk-formular" hidden>
+    <label for="merk-name">Dein Name</label>
+    <input id="merk-name" type="text" autocomplete="name">
+    <label for="merk-anlass">Wofür ist das Bild? (freiwillig)</label>
+    <textarea id="merk-anlass" placeholder="z. B. Geschenk zur Meisterprüfung"></textarea>
+    <a class="knopf" id="merk-senden" href="#">Anfrage per E-Mail senden</a>
+    <p class="klein">Es öffnet sich dein E-Mail-Programm mit einer fertigen Nachricht. Du zahlst noch nichts.</p>
+  </div>
+</aside>
+
+<script>
+(function(){
+  var MAIL = "tobias@beispiel.de"; // Platzhalter, echte Adresse von Tobias eintragen
+
+  var BERUFE = [
+    {n:"Der Bäcker", k:"alt", t:"Er stehet auf, wenn alle Welt noch schläft, und knetet Mehl und Wasser zu dem Brot, ohn welches niemand leben mag."},
+    {n:"Der Böttcher", k:"alt", t:"Aus krummen Dauben und eisernen Reifen fügt er Fass und Zuber, so dicht, dass kein Tropfen Weines verloren geht."},
+    {n:"Der Dachdecker", k:"alt", t:"Hoch über allen Köpfen wandelt er auf First und Latten und hält Regen, Sturm und Schnee vom Hause fern."},
+    {n:"Der Elektriker", k:"heute", t:"Er bändigt den unsichtbaren Blitz in Draht und Dose und bringet Licht in jede Stube, so man nur den Schalter drücket."},
+    {n:"Der Fleischer", k:"alt", t:"Mit scharfem Messer und kundiger Hand bereitet er Wurst und Braten, wie es die Zunft seit alters lehrt."},
+    {n:"Der Kfz-Mechanikus", k:"heute", t:"Er horchet dem eisernen Ross ins Herz, findet jeden Fehl im Getriebe und schickt es wohl gerichtet wieder auf die Straße."},
+    {n:"Der Maler", k:"alt", t:"Mit Pinsel, Quast und Farbentopf gibt er Wand und Fassade ein neues Kleid, auf dass das Haus in frischem Glanze steht."},
+    {n:"Die Pflegerin", k:"heute", t:"Sie wachet bei Tag und Nacht an Bett und Lager und schenket den Schwachen Geduld, Kraft und ein gutes Wort."},
+    {n:"Der Programmierer", k:"heute", t:"In seltsamen Zeichen schreibt er Befehle für die denkende Maschine und suchet des Nachts nach dem verborgenen Fehler."},
+    {n:"Der Schmied", k:"alt", t:"Am glühenden Feuer zwinget er das Eisen mit Hammer und Amboss in jede Form, die Hof und Handwerk brauchen."},
+    {n:"Der Tischler", k:"alt", t:"Aus Brett und Bohle fügt er Tisch, Schrank und Truhe, auf Zapfen und Zinken gebaut, für viele Menschenalter."},
+    {n:"Der Zimmermann", k:"alt", t:"Er richtet Balken, Sparren und Ständer zum festen Gerüst und ziehet mit dem Richtkranz den Segen aufs neue Haus."}
+  ];
+
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];});}
+  function wort(n){var t=n.split(" ");return t[t.length-1];}
+  var zaehler=0;
+
+  function bild(b){
+    zaehler++;
+    var id="schraffur"+zaehler;
+    var L=wort(b.n).charAt(0);
+    var lang=b.n.length>14 ? ' textLength="236" lengthAdjust="spacingAndGlyphs"' : '';
+    return '<svg viewBox="0 0 300 380" role="img" aria-label="Platzhalter für das Bild '+esc(b.n)+'">'+
+      '<defs><pattern id="'+id+'" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#B9B09A" stroke-width="1"/></pattern></defs>'+
+      '<rect width="300" height="380" fill="#EFEBDD"/>'+
+      '<rect x="14" y="14" width="272" height="352" fill="url(#'+id+')" opacity=".6"/>'+
+      '<rect x="14" y="14" width="272" height="352" fill="none" stroke="#231C14" stroke-width="2"/>'+
+      '<rect x="21" y="21" width="258" height="338" fill="none" stroke="#231C14" stroke-width=".8"/>'+
+      '<rect x="66" y="58" width="168" height="182" fill="#EFEBDD" stroke="#231C14" stroke-width="1"/>'+
+      '<text x="150" y="200" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="150" fill="#A3271B">'+esc(L)+'</text>'+
+      '<rect x="40" y="262" width="220" height="48" fill="#EFEBDD"/>'+
+      '<text x="150" y="296" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="28" fill="#231C14"'+lang+'>'+esc(b.n)+'</text>'+
+      '<text x="150" y="338" text-anchor="middle" font-family="Alegreya, serif" font-style="italic" font-size="14" fill="#4A3F33">Platzhalter für dein Bild</text>'+
+      '</svg>';
+  }
+
+  // Startbild
+  document.getElementById("start-blatt").innerHTML = bild(BERUFE.filter(function(b){return b.n==="Der Schmied";})[0]);
+
+  // Register
+  var register=document.getElementById("register");
+  var sortiert=BERUFE.slice().sort(function(a,b){return wort(a.n).localeCompare(wort(b.n),"de");});
+  register.innerHTML = sortiert.map(function(b,i){
+    return '<li class="beruf" data-kat="'+b.k+'" data-such="'+esc((b.n+" "+b.t).toLowerCase())+'">'+
+      '<figure>'+bild(b)+'</figure>'+
+      '<h3>'+esc(b.n)+'</h3>'+
+      '<p class="chronik">'+esc(b.t)+'</p>'+
+      '<p class="angaben">Format und Preis: folgt</p>'+
+      '<button type="button" data-name="'+esc(b.n)+'" aria-pressed="false">Auf die Merkliste</button>'+
+      '</li>';
+  }).join("");
+
+  // Suche und Filter
+  var suchfeld=document.getElementById("suchfeld");
+  var filterKnoepfe=document.querySelectorAll("[data-filter]");
+  var aktiverFilter="alle";
+  function filtern(){
+    var q=suchfeld.value.trim().toLowerCase();
+    var treffer=0;
+    register.querySelectorAll(".beruf").forEach(function(li){
+      var passt=(aktiverFilter==="alle"||li.dataset.kat===aktiverFilter)&&(!q||li.dataset.such.indexOf(q)>-1);
+      li.hidden=!passt;
+      if(passt)treffer++;
+    });
+    document.getElementById("leer").classList.toggle("zeigen",treffer===0);
+  }
+  suchfeld.addEventListener("input",filtern);
+  filterKnoepfe.forEach(function(k){
+    k.addEventListener("click",function(){
+      aktiverFilter=k.dataset.filter;
+      filterKnoepfe.forEach(function(x){x.setAttribute("aria-pressed",x===k?"true":"false");});
+      filtern();
+    });
+  });
+
+  // Merkliste
+  var merk=[];
+  var zahl=document.getElementById("merk-zahl");
+  var liste=document.getElementById("merk-liste");
+  var leer=document.getElementById("merk-leer");
+  var formular=document.getElementById("merk-formular");
+  var panel=document.getElementById("merkliste");
+  var schleier=document.getElementById("schleier");
+
+  function zeichneMerkliste(){
+    zahl.textContent=merk.length;
+    leer.hidden=merk.length>0;
+    formular.hidden=merk.length===0;
+    liste.innerHTML=merk.map(function(n){
+      return '<li><span>'+esc(n)+'</span><button type="button" data-weg="'+esc(n)+'">Entfernen</button></li>';
+    }).join("");
+    register.querySelectorAll("button[data-name]").forEach(function(btn){
+      var drauf=merk.indexOf(btn.dataset.name)>-1;
+      btn.setAttribute("aria-pressed",drauf?"true":"false");
+      btn.textContent=drauf?"Auf der Merkliste":"Auf die Merkliste";
+    });
+  }
+  register.addEventListener("click",function(e){
+    var btn=e.target.closest("button[data-name]");
+    if(!btn)return;
+    var n=btn.dataset.name;
+    var i=merk.indexOf(n);
+    if(i>-1){merk.splice(i,1);}else{merk.push(n);}
+    zeichneMerkliste();
+  });
+  liste.addEventListener("click",function(e){
+    var btn=e.target.closest("button[data-weg]");
+    if(!btn)return;
+    merk.splice(merk.indexOf(btn.dataset.weg),1);
+    zeichneMerkliste();
+  });
+
+  function oeffnen(){panel.classList.add("offen");schleier.classList.add("offen");panel.setAttribute("aria-hidden","false");document.getElementById("merk-zu").focus();}
+  function schliessen(){panel.classList.remove("offen");schleier.classList.remove("offen");panel.setAttribute("aria-hidden","true");document.getElementById("merk-oeffnen").focus();}
+  document.getElementById("merk-oeffnen").addEventListener("click",oeffnen);
+  document.getElementById("merk-zu").addEventListener("click",schliessen);
+  schleier.addEventListener("click",schliessen);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&panel.classList.contains("offen"))schliessen();});
+
+  var NL="\r\n";
+  function mailto(betreff,text){return "mailto:"+MAIL+"?subject="+encodeURIComponent(betreff)+"&body="+encodeURIComponent(text);}
+
+  document.getElementById("merk-senden").addEventListener("click",function(e){
+    var name=document.getElementById("merk-name").value.trim();
+    var anlass=document.getElementById("merk-anlass").value.trim();
+    var text="Hallo Tobias,"+NL+NL+"ich interessiere mich für diese Bilder:"+NL+
+      merk.map(function(n){return "  "+n;}).join(NL)+NL+NL+
+      (anlass?"Wofür: "+anlass+NL+NL:"")+
+      "Kannst du mir Preis, Format und Versandkosten schicken?"+NL+NL+
+      "Viele Grüße"+NL+(name||"");
+    this.href=mailto("Anfrage: "+merk.join(", "),text);
+  });
+
+  document.getElementById("auftrag-knopf").href=mailto("Anfrage Auftragsbild",
+    "Hallo Tobias,"+NL+NL+"ich hätte gern ein Bild für diesen Beruf:"+NL+NL+"Wofür ist es gedacht:"+NL+NL+"Bis wann brauche ich es:"+NL+NL+"Viele Grüße"+NL);
+
+
+  zeichneMerkliste();
+})();
+</script>
+</body>
+</html>
